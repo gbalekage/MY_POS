@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MYPOS Server Control</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #fefdf6; /* Light cream background */
+        color: #0d1d11; /* Dark green text */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #316d40; /* Green for the heading */
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      #log {
+        width: 100%;
+        max-width: 600px;
+        height: 250px;
+        overflow-y: auto;
+        border: none;
+        border-radius: 10px;
+        padding: 15px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        color: #0d1d11;
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      .button-container {
+        display: flex;
+        gap: 15px;
+      }
+
+      button {
+        font-family: "Poppins", sans-serif;
+        padding: 12px 25px;
+        font-size: 0.9rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      button#start {
+        background-color: #316d40;
+        color: #fefdf6;
+      }
+
+      button#stop {
+        background-color: #f44336;
+        color: #fefdf6;
+      }
+
+      button#restart {
+        background-color: #dfe77e;
+        color: #0d1d11;
+      }
+
+      footer {
+        margin-top: 20px;
+        font-size: 0.85rem;
+        color: #316d40;
+      }
+
+      footer a {
+        color: #316d40;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>MYPOS Server Control</h1>
+    <div id="log"></div>
+    <div class="button-container">
+      <button id="start">Start Server</button>
+      <button id="stop">Stop Server</button>
+      <button id="restart">Restart Server</button>
+    </div>
+    <footer>© 2025 <a href="#">MYPOS</a></footer>
+    <script src="renderer.js"></script>
+  </body>
+</html>

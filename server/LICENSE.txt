@@ -1,0 +1,42 @@
+Licence d'Utilisation du Serveur POS
+
+En installant, copiant, accédant ou utilisant de quelque manière que ce soit l'application serveur POS (ci-après dénommée "le Logiciel"), vous acceptez d'être lié par les termes et conditions de la présente Licence d'Utilisation. Si vous n'acceptez pas les termes de cette licence, n'installez pas, n'utilisez pas et ne copiez pas le Logiciel.
+
+1. Propriété intellectuelle
+Le Logiciel, ainsi que tous les droits associés, y compris mais sans s'y limiter, les droits d'auteur, marques déposées, secrets commerciaux et tout autre droit de propriété intellectuelle, est et restera la propriété exclusive de son créateur. La présente licence ne vous confère aucun droit de propriété sur le Logiciel.
+
+2. Licence d'utilisation
+Sous réserve de votre respect des termes de la présente licence, vous recevez un droit limité, non exclusif, non transférable et révocable d'utiliser le Logiciel sur un seul serveur ou appareil. Toute utilisation au-delà de cette limitation nécessite une licence supplémentaire ou une autorisation écrite préalable.
+
+3. Restrictions
+Vous vous engagez à ne pas :
+
+Copier, modifier, adapter, traduire, distribuer ou créer des œuvres dérivées du Logiciel ;
+
+Décompiler, désassembler ou procéder à l’ingénierie inverse du Logiciel ;
+
+Louer, prêter, vendre, céder, concéder en sous-licence ou transférer de quelque manière que ce soit le Logiciel à un tiers sans l'accord écrit préalable du titulaire des droits ;
+
+Utiliser le Logiciel à des fins illégales ou non autorisées.
+
+
+4. Mise à jour et maintenance
+Le titulaire de la licence se réserve le droit de fournir, ou non, des mises à jour, correctifs ou améliorations du Logiciel. Toute mise à jour fournie sera soumise aux termes de cette licence, sauf indication contraire.
+
+5. Durée et résiliation
+La présente licence est en vigueur jusqu'à sa résiliation. Elle sera automatiquement résiliée sans préavis si vous ne respectez pas les termes de cette licence. En cas de résiliation, vous devez cesser toute utilisation du Logiciel et supprimer toutes les copies en votre possession.
+
+6. Garantie limitée
+Le Logiciel est fourni "tel quel" sans aucune garantie expresse ou implicite, y compris, mais sans s'y limiter, les garanties de qualité marchande, d'adéquation à un usage particulier et d'absence de contrefaçon. Vous assumez tous les risques liés à l'utilisation du Logiciel.
+
+7. Limitation de responsabilité
+En aucun cas, le titulaire des droits ne pourra être tenu responsable de tout dommage direct, indirect, spécial, accessoire ou consécutif résultant de l'utilisation ou de l'impossibilité d'utiliser le Logiciel, même si le titulaire a été informé de la possibilité de tels dommages.
+
+8. Confidentialité
+Toutes les données collectées via le Logiciel peuvent être utilisées conformément à la politique de confidentialité applicable. Vous acceptez que certaines informations techniques puissent être collectées pour améliorer le Logiciel.
+
+9. Dispositions générales
+Si une partie de la présente licence est jugée invalide ou inapplicable, cette invalidité n'affectera pas la validité des autres dispositions. Cette licence constitue l'intégralité de l'accord entre les parties concernant l'objet traité.
+
+10. Loi applicable
+La présente licence est régie et interprétée conformément aux lois en vigueur dans le pays du titulaire de la licence, sans tenir compte de ses principes de conflits de lois.
