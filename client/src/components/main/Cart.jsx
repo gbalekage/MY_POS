@@ -19,7 +19,10 @@ export default function Cart({
 }) {
   const [showDialog, setShowDialog] = useState(false);
 
-  const orderId = selectedTable?.currentOrder;
+  const order = selectedTable?.currentOrder;
+  const orderId = order?._id || null;
+
+  // console.log("Order ID in Cart:", orderId);
 
   const updateQuantity = (id, delta) => {
     setOrderItems((prev) =>
@@ -54,8 +57,7 @@ export default function Cart({
 
   const breakItems = async (itemId, breakQty) => {
     try {
-      console.log("ID de l'article à diviser :", itemId);
-      console.log("Quantité à diviser :", breakQty);
+      console.log("Received from OrderDetails:", itemId, breakQty);
 
       const serverUrl = await window.electronAPI.ipcRenderer.invoke(
         "get-server-url"
@@ -197,9 +199,9 @@ export default function Cart({
           )}
 
           <ul className="overflow-auto max-h-[calc(100vh-20rem)] divide-y">
-            {orderItems.map((item) => (
+            {orderItems.map((item, index) => (
               <li
-                key={item._id}
+                key={`${item._id}-${index}`}
                 className="flex justify-between items-center py-2"
               >
                 <div className="flex flex-col">

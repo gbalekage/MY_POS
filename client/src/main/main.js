@@ -9,7 +9,7 @@ let mainWindow = null;
 let configWindow = null;
 let retryWindow = null;
 
-const isDev = true;
+const isDev = !app.isPackaged;
 
 function createMainWindow() {
     mainWindow = new BrowserWindow({
@@ -23,7 +23,11 @@ function createMainWindow() {
         },
     });
 
-    mainWindow.loadURL('http://localhost:5173/');
+    if (isDev) {
+        mainWindow.loadURL('http://localhost:5173/');
+    } else {
+        mainWindow.loadFile(path.join(__dirname, '../../dist/index.html'));
+    }
     mainWindow.on('closed', () => (mainWindow = null));
 }
 
@@ -39,7 +43,11 @@ function createConfigWindow() {
         },
     });
 
-    configWindow.loadURL('http://localhost:5173/config');
+    if (isDev) {
+        configWindow.loadURL('http://localhost:5173/config');
+    } else {
+        configWindow.loadFile(path.join(__dirname, '../../dist/index.html'), { hash: 'config' });
+    }
     configWindow.on('closed', () => (configWindow = null));
 }
 
@@ -56,7 +64,11 @@ function createRetryWindow() {
         },
     });
 
-    retryWindow.loadURL('http://localhost:5173/retry');
+    if (isDev) {
+        retryWindow.loadURL('http://localhost:5173/retry');
+    } else {
+        retryWindow.loadFile(path.join(__dirname, '../../dist/index.html'), { hash: 'retry' });
+    }
     retryWindow.on('closed', () => (retryWindow = null));
 }
 

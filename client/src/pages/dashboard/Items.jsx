@@ -103,65 +103,70 @@ const ItemsPage = () => {
           </CardHeader>
 
           <CardContent>
-            <Table>
-              <TableHeader>
-                <TableRow className="text-center">
-                  <TableHead>#</TableHead>
-                  <TableHead>Nom</TableHead>
-                  <TableHead>Code-barres</TableHead>
-                  <TableHead>Prix</TableHead>
-                  <TableHead>Stock</TableHead>
-                  <TableHead>Magasin</TableHead>
-                  <TableHead>Catégorie</TableHead>
-                  <TableHead>Fournisseur</TableHead>
-                  <TableHead>Statut</TableHead>
-                  <TableHead>Action</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {filteredItems.length === 0 ? (
-                  <TableRow>
-                    <TableCell
-                      colSpan={10}
-                      className="text-center py-6 text-muted-foreground"
-                    >
-                      Aucun produit trouvé.
-                    </TableCell>
+            <div style={{ maxHeight: "60vh", overflowY: "auto" }}>
+              <Table>
+                <TableHeader>
+                  <TableRow className="text-center">
+                    <TableHead>#</TableHead>
+                    <TableHead>Nom</TableHead>
+                    <TableHead>Code-barres</TableHead>
+                    <TableHead>Prix</TableHead>
+                    <TableHead>Stock</TableHead>
+                    <TableHead>Magasin</TableHead>
+                    <TableHead>Catégorie</TableHead>
+                    <TableHead>Fournisseur</TableHead>
+                    <TableHead>Statut</TableHead>
+                    <TableHead>Action</TableHead>
                   </TableRow>
-                ) : (
-                  filteredItems.map((category, index) => (
-                    <TableRow key={category._id} className="cursor-pointer">
-                      <TableCell>{index + 1}</TableCell>
-                      <TableCell>{category.name}</TableCell>
-                      <TableCell>{category.barcode}</TableCell>
-                      <TableCell>{category.price} FC</TableCell>
-                      <TableCell>{category.stock}</TableCell>
-                      <TableCell>{category.store?.name}</TableCell>
-                      <TableCell>{category.category?.name}</TableCell>
-                      <TableCell>{category.supplier?.name}</TableCell>
-                      <TableCell>
-                        {category.isActive ? "Actif" : "Inactif"}
-                      </TableCell>
+                </TableHeader>
+                <TableBody>
+                  {filteredItems.length === 0 ? (
+                    <TableRow>
                       <TableCell
-                        className="space-x-2 text-center"
-                        onClick={(e) => e.stopPropagation()}
+                        colSpan={10}
+                        className="text-center py-6 text-muted-foreground"
                       >
-                        <Button size="sm" onClick={() => handleEdit(category)}>
-                          Modifier
-                        </Button>
-                        <Button
-                          size="sm"
-                          className="bg-red-500 hover:bg-red-600"
-                          onClick={() => handleDelete(category)}
-                        >
-                          Supprimer
-                        </Button>
+                        Aucun produit trouvé.
                       </TableCell>
                     </TableRow>
-                  ))
-                )}
-              </TableBody>
-            </Table>
+                  ) : (
+                    filteredItems.map((category, index) => (
+                      <TableRow key={category._id} className="cursor-pointer">
+                        <TableCell>{index + 1}</TableCell>
+                        <TableCell>{category.name}</TableCell>
+                        <TableCell>{category.barcode}</TableCell>
+                        <TableCell>{category.price} FC</TableCell>
+                        <TableCell>{category.stock}</TableCell>
+                        <TableCell>{category.store?.name}</TableCell>
+                        <TableCell>{category.category?.name}</TableCell>
+                        <TableCell>{category.supplier?.name}</TableCell>
+                        <TableCell>
+                          {category.isActive ? "Actif" : "Inactif"}
+                        </TableCell>
+                        <TableCell
+                          className="space-x-2 text-center"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <Button
+                            size="sm"
+                            onClick={() => handleEdit(category)}
+                          >
+                            Modifier
+                          </Button>
+                          <Button
+                            size="sm"
+                            className="bg-red-500 hover:bg-red-600"
+                            onClick={() => handleDelete(category)}
+                          >
+                            Supprimer
+                          </Button>
+                        </TableCell>
+                      </TableRow>
+                    ))
+                  )}
+                </TableBody>
+              </Table>
+            </div>
           </CardContent>
         </Card>
       </section>

@@ -460,7 +460,7 @@ const Cashier = () => {
                 <TableRow>
                   <TableHead>#</TableHead>
                   <TableHead>Table</TableHead>
-                  <TableHead>Client</TableHead>
+                  <TableHead>Serveur</TableHead>
                   <TableHead>Montant</TableHead>
                   <TableHead>Statut</TableHead>
                   <TableHead className="text-right">Actions</TableHead>
@@ -477,7 +477,7 @@ const Cashier = () => {
                     </TableCell>
                   </TableRow>
                 ) : (
-                  filteredOrders.slice(0, 10).map((order, index) => (
+                  filteredOrders.map((order, index) => (
                     <TableRow key={order._id}>
                       <TableCell>{index + 1}</TableCell>
                       <TableCell>{order.table?.tableNumber}</TableCell>

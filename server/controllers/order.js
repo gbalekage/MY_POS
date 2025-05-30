@@ -110,13 +110,13 @@ const placeOrder = async (req, res, next) => {
     });
 
     // Imprimer les items regroupés par store
-    // for (const storeId in storeItemMap) {
-    //   try {
-    //     await printOrder(storeItemMap[storeId], storeId, userName);
-    //   } catch (error) {
-    //     console.error("Erreur d'impression:", error);
-    //   }
-    // }
+    for (const storeId in storeItemMap) {
+      try {
+        await printOrder(storeItemMap[storeId], storeId, userName);
+      } catch (error) {
+        console.error("Erreur d'impression:", error);
+      }
+    }
 
     res.status(201).json({
       message: "Commande placée avec succès.",
@@ -773,7 +773,7 @@ const payOrder = async (req, res) => {
     });
 
     // 🖨️ Imprimer le reçu
-    // await printReceipt(sale._id, order);
+    await printReceipt(sale._id, order);
 
     await Order.findByIdAndDelete(orderId);
 
@@ -946,7 +946,7 @@ const receivePayment = async (req, res) => {
 
     await customer.save();
 
-    // await printPaidSignedBill(signedBillPaid._id, signedBill);
+    await printPaidSignedBill(signedBillPaid._id, signedBill);
 
     // Supprimer la facture signée
     await SignedBill.findByIdAndDelete(signedBillId);

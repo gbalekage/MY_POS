@@ -310,23 +310,23 @@ const closeDay = async (req, res, next) => {
     await newCloseDay.save();
 
     // --- Print report ---
-    // await printReport({
-    //   date,
-    //   cashierName,
-    //   paymentSummary,
-    //   salesByStore,
-    //   salesByAttendant,
-    //   discounts: discountTotal,
-    //   cancellations: cancellationTotal,
-    //   expenses: expenseTotal,
-    //   signedBills: signedBillsTotal,
-    //   status,
-    //   totalDifference,
-    //   totalSales,
-    //   totalCollections,
-    //   message,
-    //   notes
-    // });
+    await printReport({
+      date,
+      cashierName,
+      paymentSummary,
+      salesByStore,
+      salesByAttendant,
+      discounts: discountTotal,
+      cancellations: cancellationTotal,
+      expenses: expenseTotal,
+      signedBills: signedBillsTotal,
+      status,
+      totalDifference,
+      totalSales,
+      totalCollections,
+      message,
+      notes
+    });
 
     res.status(200).json({
       message: "Clôture de journée enregistrée avec succès.",
